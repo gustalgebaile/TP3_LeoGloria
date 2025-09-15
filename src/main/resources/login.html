@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login</title></head>
+<body>
+<input id="email" placeholder="Email" />
+<input id="password" placeholder="Senha" />
+<button id="loginButton">Login</button>
+<div id="loginMessage" style="display:none">Bem-vindo!</div>
+
+<script>
+    document.getElementById("loginButton").addEventListener("click", function() {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        if (email === "user@test.com" && password === "1234") {
+            document.getElementById("loginMessage").style.display = "block";
+            window.location.href = "dashboard.html";
+        } else {
+            alert("Email ou senha incorretos");
+        }
+    });
+</script>
+</body>
+</html>
