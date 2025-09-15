@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato</title>
+    <script>
+        function enviarFormulario(event) {
+            event.preventDefault(); // evita refresh
+            document.getElementById("successMessage").style.display = "block";}
+        window.onload = function() {
+            document.getElementById("contactForm").addEventListener("submit", enviarFormulario);}
+    </script>
+</head>
+<body>
+<h1>Formulário de Contato</h1>
+<form id="contactForm">
+    <input type="text" id="name" placeholder="Nome" required /><br><br>
+    <input type="email" id="email" placeholder="Email" required /><br><br>
+    <textarea id="message" placeholder="Mensagem" required></textarea><br><br>
+    <label>
+        <input type="checkbox" id="acceptTerms"> Aceito os termos
+    </label><br><br>
+    <label for="subject">Assunto:</label>
+    <select id="subject">
+        <option value="suporte">Suporte</option>
+        <option value="financeiro">Financeiro</option>
+        <option value="outros">Outros</option>
+    </select><br><br>
+    <button id="submitButton" type="submit">Enviar</button>
+</form>
+<div id="successMessage" style="display:none; color:green; margin-top:20px;">
+    Mensagem enviada com sucesso!
+</div>
+</body>
+</html>
