@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Longa</title>
+    <style>
+        body {
+            height: 2000px; /* força a página a ficar longa para ter rolagem */
+            font-family: Arial, sans-serif;
+        }
+        #scrollButton {
+            position: absolute;
+            bottom: 50px; /* botão só aparece no fim da página */
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 12px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #successMessage {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h1>Página de Teste de Rolagem</h1>
+<p>Role para baixo para encontrar o botão escondido no final da página.</p>
+
+<button id="scrollButton">Clique Aqui</button>
+
+<div id="successMessage">Botão clicado com sucesso!</div>
+
+<script>
+    document.getElementById("scrollButton").addEventListener("click", function() {
+        document.getElementById("successMessage").style.display = "block";
+    });
+</script>
+</body>
+</html>
