@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrinho de Compras</title>
+    <style>
+        table { border-collapse: collapse; width: 50%; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+        #checkoutButton { margin-top: 20px; padding: 10px; background-color: green; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+<h1>Seu Carrinho</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Produto</th>
+        <th>Quantidade</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Produto X</td>
+        <td id="productQuantity">1</td>
+    </tr>
+    </tbody>
+</table>
+
+<button id="checkoutButton">Finalizar Compra</button>
+
+<div id="successMessage" style="display:none; color:green; margin-top:20px;">
+    Pedido realizado com sucesso!
+</div>
+
+<script>
+    document.getElementById("checkoutButton").addEventListener("click", function() {
+        document.getElementById("successMessage").style.display = "block";
+    });
+</script>
+</body>
+</html>
